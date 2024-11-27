@@ -1,0 +1,88 @@
+---
+const experiences = [
+  {
+    title: "Data Science Intern",
+    company: "UM6P - Analytics Lab",
+    period: "03/2024 - 09/2024",
+    location: "Rabat",
+    description: "Working on advanced satellite imagery analysis and segmentation using deep learning techniques.",
+    tasks: [
+      "Segmentation, Parcelization and Plots delimitation based on satellite imagery",
+      "Literature review on satellite images segmentation and edge detection algorithms",
+      "Analysis of satellite images using QGIS",
+      "Development and Implementation of segmentation models for satellite images (Unet, Linknet, FPN, ...)"
+    ],
+    image: "/segmentation-example.png"},
+  {
+    title: "Data Science Intern",
+    company: "AI Movement",
+    period: "07/2023 - 09/2023",
+    location: "Rabat",
+    description: "Developed knowledge graph-based solutions for industrial maintenance diagnosis.",
+    tasks: [
+      "Literature review and Establishing the state of the art on Knowledge Graphs for diagnosis",
+      "Knowledge Graph Modeling using Neo4j, Node embedding technics, ...",
+      "Implementation of Link Prediction Models for maintenance data labeling"
+    ],
+    image: "/grp_int.png"
+  }
+];
+---
+
+<section id="experience" class="py-20 bg-slate-800/30">
+  <div class="container mx-auto px-6">
+    <h2 class="text-5xl font-bold text-center mb-16 gradient-text" data-aos="fade-up">Experience</h2>
+    
+    <div class="max-w-6xl mx-auto">
+      {experiences.map((exp, index) => (
+        <div class="mb-20 last:mb-0">
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2 space-y-6" data-aos="fade-right">
+              <div class="glass-card p-8 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-secondary"></div>
+                <div class="space-y-4">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-3xl font-bold text-white">{exp.title}</h3>
+                      <p class="text-xl text-indigo-400">{exp.company}</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-gray-300">{exp.period}</p>
+                      <p class="text-gray-400">{exp.location}</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-300">{exp.description}</p>
+                  <ul class="space-y-3">
+                    {exp.tasks.map((task) => (
+                      <li class="flex items-start space-x-3">
+                        <i class="fas fa-arrow-right text-indigo-400 mt-1.5"></i>
+                        <span class="text-gray-300">{task}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            {exp.image && (
+              <div class="lg:w-1/2" data-aos="fade-left">
+                <div class="relative group">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                  <div class="relative glass-card p-6 space-y-4">
+                    <div class="grid gap-4">
+                      <img 
+                        src={exp.image} 
+                        alt="Segmentation"
+                        class="rounded-lg w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section></content>

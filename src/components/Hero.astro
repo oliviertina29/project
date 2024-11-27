@@ -1,0 +1,42 @@
+---
+const socialLinks = [
+  { href: 'mailto:Olivier.Djara@um6p.ma', icon: 'fa-envelope', label: 'Email' },
+  { href: 'https://github.com/oliviertina29', icon: 'fab fa-github', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/djara-olivier-tina/', icon: 'fab fa-linkedin', label: 'LinkedIn' },
+];
+---
+
+<section class="min-h-screen flex items-center justify-center pt-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center" data-aos="fade-up">
+      <div class="mb-8 flex justify-center">
+        <div class="relative w-48 h-48">
+          <img 
+            src="/profile.jpg" 
+            alt="Olivier Tina"
+            class="rounded-full object-cover w-full h-full border-4 border-indigo-500/50"
+          />
+          <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-10"></div>
+        </div>
+      </div>
+      <h1 class="text-6xl font-bold mb-4 gradient-text">TINA Djara Olivier</h1>
+      <h2 class="text-3xl mb-6">
+        <span id="typed-text"></span>
+      </h2>
+      <p class="text-xl text-gray-300 mb-8">MSc in Quantitative and Financial Modeling</p>
+      <div class="flex justify-center space-x-8">
+        {socialLinks.map(link => (
+          <a 
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-3xl text-gray-300 hover:text-indigo-500 transition-colors transform hover:scale-110"
+            aria-label={link.label}
+          >
+            <i class={link.icon}></i>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

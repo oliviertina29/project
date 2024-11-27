@@ -1,0 +1,20 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+const { src, alt, caption } = Astro.props;
+---
+
+<div class="glass-card p-4 hover:scale-[1.02] transition-transform" data-aos="fade-up">
+  <img 
+    src={src} 
+    alt={alt} 
+    class="w-full h-auto rounded-lg shadow-lg"
+  />
+  {caption && (
+    <p class="text-center text-gray-300 mt-4 text-sm">{caption}</p>
+  )}
+</div>

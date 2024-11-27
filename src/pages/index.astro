@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Olivier Tina - Data Scientist Portfolio">
+  <Header />
+  <Hero />
+  
+  <main>
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+        <div class="glass-card p-8 max-w-3xl mx-auto">
+          <p class="text-lg text-gray-300">
+            Data Scientist specializing in machine learning, deep learning, and big data technologies. 
+            Currently pursuing MSc in Quantitative and Financial Modeling with a focus on Data Engineering 
+            at UM6P ABS - College of Computing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="py-20 bg-slate-800/30">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Education</h2>
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div class="glass-card p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-indigo-400">MSc in Quantitative and Financial Modeling</h3>
+            <p class="text-gray-300 mt-2">Mohamed VI Polytechnic University | 2022-2024</p>
+            <ul class="mt-4 text-gray-300 list-disc list-inside space-y-2">
+              <li>Advanced python programming, Statistical methods, Stochastic modeling</li>
+              <li>Machine Learning, Deep Learning, High Performance Computing</li>
+              <li>Database management, Data warehouse and Business Intelligence</li>
+            </ul>
+          </div>
+          
+          <div class="glass-card p-8" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-indigo-400">Bachelor in Applied Mathematics</h3>
+            <p class="text-gray-300 mt-2">Hassan 1st University | 2018-2021</p>
+            <ul class="mt-4 text-gray-300 list-disc list-inside space-y-2">
+              <li>Data analysis, Advanced Probability, Statistics</li>
+              <li>Scientific Computing, Linear Algebra</li>
+              <li>Object oriented programming using C++</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Experience />
+    
+    <Projects />
+
+    <section id="skills" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 gradient-text" data-aos="fade-up">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="glass-card p-8 transform hover:scale-105 transition-transform" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-indigo-400 mb-4">Data Science</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fas fa-brain mr-2"></i>Machine Learning</li>
+              <li><i class="fas fa-network-wired mr-2"></i>Deep Learning</li>
+              <li><i class="fas fa-chart-bar mr-2"></i>Statistical Analysis</li>
+              <li><i class="fas fa-chart-line mr-2"></i>Data Visualization</li>
+            </ul>
+          </div>
+          
+          <div class="glass-card p-8 transform hover:scale-105 transition-transform" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-indigo-400 mb-4">Programming</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fab fa-python mr-2"></i>Python</li>
+              <li><i class="fas fa-code mr-2"></i>R</li>
+              <li><i class="fas fa-code mr-2"></i>C++</li>
+              <li><i class="fas fa-database mr-2"></i>SQL</li>
+            </ul>
+          </div>
+          
+          <div class="glass-card p-8 transform hover:scale-105 transition-transform" data-aos="fade-up">
+            <h3 class="text-2xl font-bold text-indigo-400 mb-4">Tools & Technologies</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li><i class="fas fa-cube mr-2"></i>TensorFlow & PyTorch</li>
+              <li><i class="fas fa-fire mr-2"></i>Apache Spark</li>
+              <li><i class="fas fa-project-diagram mr-2"></i>Neo4j</li>
+              <li><i class="fab fa-docker mr-2"></i>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-800/30">
+      <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-8 gradient-text">Get in Touch</h2>
+        <div class="glass-card p-8 max-w-2xl mx-auto">
+          <p class="text-lg text-gray-300 mb-8">
+            Feel free to reach out for collaborations or just a friendly chat
+          </p>
+          <div class="flex justify-center space-x-8">
+            <a href="mailto:Olivier.Djara@um6p.ma" class="text-3xl text-gray-300 hover:text-indigo-500 transition-colors transform hover:scale-110">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/djara-olivier-tina/" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-300 hover:text-indigo-500 transition-colors transform hover:scale-110">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/oliviertina29" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-300 hover:text-indigo-500 transition-colors transform hover:scale-110">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8">
+    <div class="container mx-auto px-6 text-center text-gray-400">
+      <p>&copy; {new Date().getFullYear()} Olivier Tina. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
